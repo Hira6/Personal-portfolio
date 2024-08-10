@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+    *{
+        background-color: black;
+    }
+        #skills {
+            padding: 50px 0;
+        }
+        
+        #skills h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: aqua;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            color: white;
+        }
+        
+        .skill-item {
+            width: 45%;
+            margin-bottom: 20px;
+        }
+        
+        .skill-bar {
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 10px;
+            border-radius: 10px;
+        }
+        /* skills bar */
+        .html {
+            width: 90%; 
+            background-color: aqua;
+            animation: html 3s;
+            }
+        .css { 
+            width: 75%;
+            background-color: #f06c64;
+            animation: css 3s;
+        }
+        .javascript {
+            width: 65%;
+            background-color: #f0db4f;
+            animation: javascript 3s; 
+            }
+        .python { 
+            width: 40%; 
+            background-color: #306998; 
+            animation: python 3s;
+        }
+        
+        
+        @keyframes html{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 90%;
+            }
+        }
+        @keyframes css{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 75%;
+            }
+        }
+        @keyframes javascript{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 65%;
+            }
+        }
+        @keyframes python{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 40%;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #navbar-menu {
+                display: none;
+            }
+        
+            #navbar-toggler {
+                display: block;
+            }
+        
+            #hero-content {
+                flex-direction: column;
+            }
+        
+            .hero-title {
+                font-size: 2rem;
+            }
+        
+            .hero-description {
+                font-size: 0.9rem;
+            }
+        
+            .about-content {
+                flex-direction: column;
+            }
+        
+            .skill-item {
+                width: 100%;
+            }
+        }
+        
+        
+        
+        
+        </style>
+</head>
+<body>
+     
+    <section id="skills">
+        <div class="container">
+            <h1>My Skills</h1>
+              
+            <div class="skill-list">
+                <div class="skill-item">
+                    <h3>HTML</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress html"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress css"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress javascript"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress python"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+
+</body>
+</html>

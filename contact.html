@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style> 
+body {
+    background-color: black;
+}
+
+#contact {
+    padding: 40px;
+    background-color: black;
+}
+
+#contact h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: aqua;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-info {
+    flex: 1 1 45%;
+    padding: 20px;
+    color: white;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: aqua;
+}
+
+.contact-form {
+    flex: 1 1 45%;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    background-color: #555;
+}
+
+.contact-form .btn {
+    background-color: aqua;
+    border: none;
+    padding: 10px 20px;
+    color: #121212;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;  
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form .btn:hover {
+    background-color: black;
+    color: aqua;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-info {
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    #contact h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-info ul li {
+        font-size: 0.9rem;
+    }
+}
+</style>
+</head>
+<body>
+     
+<section id="contact">
+    <div class="container">
+        <h1>Contact Me</h1>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>If you have any questions or just want to say hello, feel free to reach out to me.</p>
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i> hiragull@example.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +123 456 7890</li>
+                    <li><i class="fa-solid fa-map-marker-alt"></i> 123 Street Name, City, Country</li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();  
+        this.reset(); 
+    });
+</script>
+
+</body>
+</html>

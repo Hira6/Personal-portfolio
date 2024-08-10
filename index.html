@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Navbar Starts -->
+    <nav id="navbar">
+        <div class="container">
+            <a id="navbar-brand" href="#">Hira Gull</a>
+            <button id="navbar-toggler">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div id="navbar-menu">
+                <ul id="navbar-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Ends -->
+
+    <!-- Hero Section Starts -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Hello</h2>
+                    <h2 class="hero-title">I am <span id="element"></span></h2>
+                    <p class="hero-description">
+                        I am a Developer with extensive experience <br> for over 5 years. My expertise is to create
+                        website designs, UX/UI designs, and many more.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn">View More</button>
+                        <a href="image\cv.doc.pdf" download>
+                            <button class="btn">Get CV</button>
+                        </a>
+                        <!-- <button class="btn">Get CV</button> -->
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./image/aisha.png" alt="Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section Ends -->
+
+    <!-- Type.js Library -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Developer', 'Designer', 'Teacher'],
+            typeSpeed: 70,
+            backSpeed: 70,
+            loop: true,
+        });
+
+        document.getElementById('navbar-toggler').addEventListener('click', function() {
+            var menu = document.getElementById('navbar-menu');
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

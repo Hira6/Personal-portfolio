@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+    *{
+        background-color: black;
+    }
+        #about {
+            padding: 50px 0;
+        }
+        
+        #about h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color:aqua;
+        }
+        #about h3{
+            color: aqua;
+
+        }
+        #about h4{
+            color: aqua;
+        }
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .about-image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            height: 140%;
+            margin-top: 30px;
+            
+        }
+        
+        .about-text {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: aqua;
+        }
+        
+        .about-text p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: white;
+        }
+
+        .about-text #element{
+            color: white;
+        }
+        </style>
+</head>
+<body>
+     
+    <section id="about">
+        <div class="container">
+            <h1>About Me</h1>  
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./image/images.jpg" alt="About Image">
+                </div>
+                <div class="about-text">
+                    <h2>Hello! I am <span id="element"></span> </h2>
+                      
+                        <h3>Education:</h3>
+                        
+                        <p>Bachelor of Science in Computer Science (BSCS)
+                        Lahore College for Women University (LCWU)
+                        </p>
+                        <p>Currently pursuing a BSCS degree with coursework covering fundamental and advanced topics in computer science.<br>
+                        Gained theoretical and practical knowledge in software development, data structures, algorithms, and database management.</p>  
+                                                                                
+                    <h3>Experience:</h3>
+                        
+                        <h4>Frontend Developer</h4>
+                        <p>Worked on several frontend development projects, focusing on building and enhancing user interfaces.
+                        Applied skills in HTML, CSS, JavaScript, and responsive design to create visually appealing and functional websites.</p>
+                         
+                        <h4>UX/UI Design Intern</h4>
+                        
+                    <p>Completed an internship in UX/UI design, gaining practical experience in creating intuitive and user-friendly interfaces.
+                        Collaborated with design teams to develop wireframes, prototypes, and user flows, improving the overall user experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Hira Gull'],
+            typeSpeed: 70,
+            backSpeed: 70,
+            loop: true,
+        });
+    </script>
+</body>
+</html>

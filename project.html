@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #projects {
+            padding: 50px;
+            background-color: black;
+        }
+
+        #projects h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: aqua;
+        }
+
+        .project-list {
+            display: flex;
+            flex-wrap: wrap; /* Changed to wrap for better responsiveness */
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .project-item {
+            flex: 1 1 calc(33.333% - 20px); /* Responsive width calculation */
+            max-width: calc(33.333% - 20px); /* Prevents items from growing too wide */
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box; /* Ensures padding is included in width */
+        }
+     
+
+        .project-item img {
+            max-width: 100%;
+            height: auto; /* Keeps the image proportional */
+            border-radius: 10px;
+            margin-bottom: 10px;
+        } 
+
+        .project-item h3 {
+            font-size: 1.5rem;
+            color: aqua;
+        }
+
+        .project-item p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: white;
+        }
+
+        @media (max-width: 1024px) {
+            .project-item {
+                flex: 1 1 calc(50% - 20px); /* Two items per row on tablets */
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-item {
+                flex: 1 1 100%; /* Full width on mobile devices */
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section id="projects">
+    <div class="container">
+        <h1>My Projects</h1>
+        <div class="project-list">
+            <div class="project-item">
+                <img src="./image/stopwatch.jpeg" alt="Project 1">
+                <h3>Project One</h3>
+                <p>A web development project that involves a fully functional stopwatch. The project involved designing the user interface with HTML and CSS, implementing the stopwatch functionality with JavaScript, and handling start, stop, reset, and lap functionalities. This task helped me enhance my coding skills.</p>
+            </div>
+            <div class="project-item">
+                <img src="./image/nav2.jpeg" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>A web development project in which I made an interactive navigation menu using HTML, CSS, and JavaScript. This menu includes dynamic style changes on scroll and hover, enhancing user experience across our web pages.</p>
+            </div>
+            <div class="project-item">
+                <img src="./image/uxui.jpeg" alt="Project 3">
+                <h3>Project Three</h3>
+                <p>A UI/UX design project to redesign a healthcare appointment scheduling system. The goal was to create an interface that simplifies the booking process, improves usability, and enhances the overall user experience for both patients and healthcare providers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
